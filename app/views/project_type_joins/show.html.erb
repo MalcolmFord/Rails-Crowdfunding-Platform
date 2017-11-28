@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @project_type_join.project %>
+</p>
+
+<p>
+  <strong>Project type:</strong>
+  <%= @project_type_join.project_type %>
+</p>
+
+<%= link_to 'Edit', edit_project_type_join_path(@project_type_join) %> |
+<%= link_to 'Back', project_type_joins_path %>

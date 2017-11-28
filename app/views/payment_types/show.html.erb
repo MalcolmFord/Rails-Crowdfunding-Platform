@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Method:</strong>
+  <%= @payment_type.method %>
+</p>
+
+<p>
+  <strong>Card number:</strong>
+  <%= @payment_type.card_number %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @payment_type.user %>
+</p>
+
+<%= link_to 'Edit', edit_payment_type_path(@payment_type) %> |
+<%= link_to 'Back', payment_types_path %>

@@ -1,0 +1,32 @@
+<%= form_with(model: supported_projects_join, local: true) do |form| %>
+  <% if supported_projects_join.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(supported_projects_join.errors.count, "error") %> prohibited this supported_projects_join from being saved:</h2>
+
+      <ul>
+      <% supported_projects_join.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :supported_projects_join_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :project_id %>
+    <%= form.text_field :project_id, id: :supported_projects_join_project_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount %>
+    <%= form.number_field :amount, id: :supported_projects_join_amount %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

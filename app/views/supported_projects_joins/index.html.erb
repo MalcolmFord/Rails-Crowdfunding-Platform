@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Supported Projects Joins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Project</th>
+      <th>Amount</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @supported_projects_joins.each do |supported_projects_join| %>
+      <tr>
+        <td><%= supported_projects_join.user %></td>
+        <td><%= supported_projects_join.project %></td>
+        <td><%= supported_projects_join.amount %></td>
+        <td><%= link_to 'Show', supported_projects_join %></td>
+        <td><%= link_to 'Edit', edit_supported_projects_join_path(supported_projects_join) %></td>
+        <td><%= link_to 'Destroy', supported_projects_join, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Supported Projects Join', new_supported_projects_join_path %>

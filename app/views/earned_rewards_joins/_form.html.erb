@@ -1,0 +1,27 @@
+<%= form_with(model: earned_rewards_join, local: true) do |form| %>
+  <% if earned_rewards_join.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(earned_rewards_join.errors.count, "error") %> prohibited this earned_rewards_join from being saved:</h2>
+
+      <ul>
+      <% earned_rewards_join.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :earned_rewards_join_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reward_id %>
+    <%= form.text_field :reward_id, id: :earned_rewards_join_reward_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

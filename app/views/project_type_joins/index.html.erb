@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Project Type Joins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Project type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @project_type_joins.each do |project_type_join| %>
+      <tr>
+        <td><%= project_type_join.project %></td>
+        <td><%= project_type_join.project_type %></td>
+        <td><%= link_to 'Show', project_type_join %></td>
+        <td><%= link_to 'Edit', edit_project_type_join_path(project_type_join) %></td>
+        <td><%= link_to 'Destroy', project_type_join, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Project Type Join', new_project_type_join_path %>

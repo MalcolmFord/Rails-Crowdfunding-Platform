@@ -1,0 +1,2 @@
+module SupportedProjectsJoinsHelper
+end

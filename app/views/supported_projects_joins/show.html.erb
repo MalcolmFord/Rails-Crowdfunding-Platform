@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @supported_projects_join.user %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @supported_projects_join.project %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @supported_projects_join.amount %>
+</p>
+
+<%= link_to 'Edit', edit_supported_projects_join_path(@supported_projects_join) %> |
+<%= link_to 'Back', supported_projects_joins_path %>
