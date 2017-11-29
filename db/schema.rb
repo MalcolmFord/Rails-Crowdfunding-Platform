@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171128001729) do
+ActiveRecord::Schema.define(version: 20171129164042) do
 
 # Could not dump table "Users" because of following StandardError
 #   Unknown type 'digest' for column 'password'
